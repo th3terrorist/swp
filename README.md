@@ -1,6 +1,7 @@
-# swp - suckless webframework based of off pandoc
+# swp
 
-swp is a minimal and sane web framework forked of off [sw](https://github.com/jroimartin/sw)
+swp is a minimal and sane web framework forked from [sw](https://github.com/jroimartin/sw),
+using pandoc instead of a custom `md2html.awk` clunky script.
 
 ## Installation
 
