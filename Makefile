@@ -1,21 +1,10 @@
-# sw - suckless webframework - 2012 - MIT License - nibble <develsec.org>
-
-DESTDIR?=
-PREFIX?=/usr/local
-P=${DESTDIR}/${PREFIX}
-
-all: sw.conf
-
-sw.conf:
-	cp sw.conf.def sw.conf
+PREFIX?=
+P=${PREFIX}
 
 install:
 	mkdir -p ${P}/bin
-	sed -e "s,/usr/bin/awk,`./whereis awk`,g" md2html.awk > ${P}/bin/md2html.awk
-	chmod +x ${P}/bin/md2html.awk
-	cp -f sw ${P}/bin/sw
-	chmod +x ${P}/bin/sw
+	cp -f swp ${P}/bin/swp
+	chmod +x ${P}/bin/swp
 
 uninstall:
-	rm -f ${P}/bin/md2html.awk
-	rm -f ${P}/bin/sw
+	rm -f ${P}/bin/swp

@@ -32,7 +32,6 @@
   border: 0;
   margin: 0;
   padding: 0;
-  background-color: #ddd;
 }
 
 #side-bar ul {
@@ -52,7 +51,6 @@
 #side-bar ul li a {
   margin: 0;
   padding: 0.1em 1ex;
-  color: #336699;
   background-color: transparent;
   text-decoration: none;
   font-size: 1em;
@@ -60,21 +58,18 @@
 }
 
 #side-bar ul li a:hover {
-  color: #111;
   text-decoration: none;
 }
 
 /* Main Copy */
 #main {
   max-width: 70em;
-  color: #111;
   margin: 0 auto 0 2em;
   padding: 1em 3em 2em 1em;
   border: 0;
 }
 
 #main a {
-  color: #336699;
   text-decoration: none;
 }
 
@@ -130,20 +125,20 @@ hr {
 code,
 pre {
   font-size: 0.6em;
-  border: 1px solid #ccc;
   padding: 0.5em;
-  overflow-x: auto;
+  overflow-x: scroll;
   white-space: pre-wrap;
-  background-color: #f8f8f8;
 }
 
 pre {
   margin-left: 2em;
+  border: 1px solid #ccc;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    background: #000;
+    background: #000 !important;
+    color: white !important;
   }
 }
 
