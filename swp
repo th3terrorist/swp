@@ -1,5 +1,5 @@
 #!/bin/sh
-# sw - suckless webframework - 2012 - MIT License - nibble <develsec.org>
+# swp - suckless webframework - 2024 - MIT License - rhighs <rmontalti.com>
 
 swp_filter() {
 	for b in $BL; do
@@ -80,11 +80,11 @@ if [ -z "$IDIR" ] || [ ! -d "$IDIR" ]; then
 fi
 
 # Load config file
-if [ ! -f "$PWD/sw.conf" ]; then
-	echo "Cannot find sw.conf in current directory"
+if [ ! -f "$PWD/swp.conf" ]; then
+	echo "Cannot find swp.conf in current directory"
 	exit 1
 fi
-. "$PWD/sw.conf"
+. "$PWD/swp.conf"
 
 # Setup output dir structure
 CDIR=$PWD
