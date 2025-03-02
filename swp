@@ -32,19 +32,23 @@ swp_page() {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${TITLE}</title>
+<title>${PAGE_TITLE}</title>
 <link rel="icon" href="/favicon.png" type="image/png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 _header_
 	# Stylesheet
 	swp_style
 	cat << _header_
 </head>
 <body>
-<div class="header">
+</article>
+<header>
 <h1 class="headerTitle">
-<a href="$(echo $1 | sed -e 's,[^/]*/,../,g' -e 's,[^/]*.md$,index.html,g')">${TITLE}</a> <span class="headerSubtitle">${SUBTITLE}</span>
+<a href="$(echo $1 | sed -e 's,[^/]*/,../,g' -e 's,[^/]*.md$,index.html,g')">${HEADER_TITLE}</a> 
 </h1>
-</div>
+<h4 class="headerSubtitle">${HEADER_SUBTITLE}</h4>
+</header>
 _header_
 	# Menu
 	echo "<div id=\"side-bar\">"
@@ -57,8 +61,9 @@ _header_
 	# Footer
 	cat << _footer_
 <div id="footer">
-<div class="right"><a href="https://github.com/jroimartin/sw">Powered by sw</a></div>
+<div class="right"><a href="https://github.com/rhighs/swp">Powered by swp</a></div>
 </div>
+</article>
 </body>
 </html>
 _footer_

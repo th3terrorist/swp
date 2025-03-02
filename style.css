@@ -1,6 +1,18 @@
-.header a {
+* {
+  margin: auto;
+  padding: auto;
+  box-sizing: border-box;
+}
+
+header a {
   border: 0;
   text-decoration: none;
+  color: #FFF !important;
+}
+
+header h1 {
+  font-size: 1.5em;
+  margin-bottom: 0;
 }
 
 .midHeader img {
@@ -8,21 +20,17 @@
 }
 
 .headerTitle {
-  font-size: 1.6em;
   font-weight: bold;
-  margin: 0 0 0 0.5em;
-  padding: 0.5em;
 }
 
 .headerTitle a {
   border: 0;
   text-decoration: none;
+  color: #FFF;
 }
 
 .headerSubtitle {
-  font-size: 0.6em;
-  font-weight: normal;
-  margin-left: 1em;
+  font-weight: bold;
 }
 
 #side-bar {
@@ -61,22 +69,12 @@
 }
 
 #main {
-  max-width: 70em;
-  margin: 0 auto 0 2em;
-  padding: 1em 3em 2em 1em;
+  width: 100%;
   border: 0;
-}
-
-#main a {
-  text-decoration: none;
 }
 
 #main a:hover {
   text-decoration: underline;
-}
-
-#main ul {
-  list-style-type: square;
 }
 
 #footer {
@@ -121,8 +119,7 @@ hr {
 
 code {
   font-size: 0.9em;
-  padding: 0.5em;
-  white-space: pre-wrap;
+  overflow-x: scroll;
 }
 
 pre {
@@ -131,33 +128,14 @@ pre {
   overflow-x: scroll;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background: #000 !important;
-    color: white !important;
-  }
-}
-
 body {
   margin: 1em auto;
-  font-size: 0.9em;
+  width: 100%;
   max-width: 40em;
   padding: 0 0.62em 3.24em;
-  font: 1.2em/1.62 sans-serif;
-}
-
-h1,
-h2,
-h3 {
-  line-height: 1.2;
-}
-
-.self-description {
-  font-size: 0.9em;
-}
-
-.quote {
-  font-size: 0.8em;
+  font: 1.1em/1.62 sans-serif;
+  background: #000;
+  color: #FFF;
 }
 
 @media print {
@@ -166,19 +144,76 @@ h3 {
   }
 }
 
-.container {
-  display: flex;
-  align-items: center;
+h1,
+h2,
+h3 {
+  line-height: 1.2;
 }
 
-.profile-image {
-  width: 128px;
-  height: 128px;
-  object-fit: cover;
-  overflow: hidden;
+h1, h2, h3, p, ul, ol, table {
+    margin: 0.6em auto 0.6em auto;
 }
 
-.profile-data {
-  margin-bottom: 0;
-  margin-left: 20px;
+/*
+ *
+ *
+ *          CODE BLOCKS
+ *
+ *
+ */
+
+/* General code block styling */
+.sourceCode {
+  background-color: #1e1e1e;
+  color: #dcdcdc;
+  padding: 1em;
+  border-radius: 5px;
+  font-family: "Fira Code", monospace;
+  font-size: 14px;
+  overflow-x: auto;
+  display: block;
+  white-space: pre-wrap;
 }
+
+/* Keyword coloring */
+.sourceCode .keyword { color: #569cd6; }
+.sourceCode .string { color: #ce9178; }
+.sourceCode .comment { color: #6a9955; font-style: italic; }
+.sourceCode .number { color: #b5cea8; }
+.sourceCode .operator { color: #d4d4d4; }
+.sourceCode .function { color: #dcdcaa; }
+.sourceCode .variable { color: #9cdcfe; }
+
+/* Language-specific tweaks */
+.sourceCode.rust .macro, .sourceCode.rust .attribute { color: #c586c0; }
+.sourceCode.javascript .function, .sourceCode.js .function,
+.sourceCode.typescript .function, .sourceCode.ts .function { color: #dcdcaa; }
+.sourceCode.python .decorator { color: #c586c0; }
+.sourceCode.cpp .preprocessor, .sourceCode.c .preprocessor { color: #c586c0; }
+.sourceCode.csharp .directive, .sourceCode.cs .directive { color: #c586c0; }
+
+/* Number literals */
+.sourceCode.rust .number, .sourceCode.js .number, .sourceCode.ts .number,
+.sourceCode.python .number, .sourceCode.cpp .number, .sourceCode.csharp .number {
+  color: #b5cea8;
+}
+
+/* String literals */
+.sourceCode.rust .string, .sourceCode.js .string, .sourceCode.ts .string,
+.sourceCode.python .string, .sourceCode.cpp .string, .sourceCode.csharp .string {
+  color: #ce9178;
+}
+
+/* Comments */
+.sourceCode.rust .comment, .sourceCode.js .comment, .sourceCode.ts .comment,
+.sourceCode.python .comment, .sourceCode.cpp .comment, .sourceCode.csharp .comment {
+  color: #6a9955;
+  font-style: italic;
+}
+
+/* Operators */
+.sourceCode.rust .operator, .sourceCode.js .operator, .sourceCode.ts .operator,
+.sourceCode.python .operator, .sourceCode.cpp .operator, .sourceCode.csharp .operator {
+  color: #d4d4d4;
+}
+
